@@ -1,7 +1,17 @@
 (ns storii.core
   (:gen-class))
 
+(defn handle-input [input]
+  input)
+
+(defn start-storii []
+  (while true
+    (print "> ")
+    (flush)
+    (println (handle-input (read-line)))))
+
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println "Welcome to Storii")
+  (start-storii))
+
